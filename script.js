@@ -11,23 +11,23 @@ let songInfo = document.getElementsByClassName('songInfo');
 
 
 let songs=[
-    {   songName:'uplifiting',
+    {   songName:'Live while we are young',
         filePath:'songs/1.mp3',
         coverPath:'covers/1.png'
     },
-    {   songName:'bg music',
+    {   songName:'18',
         filePath:'songs/2.mp3',
         coverPath:'covers/2.png'
     },
-    {   songName:'naruto playlist',
+    {   songName:'Change my mind',
         filePath:'songs/3.mp3',
         coverPath:'covers/3.jpg'
     },
-    {   songName:'motivational bgm',
+    {   songName:'I want',
         filePath:'songs/4.mp3',
         coverPath:'covers/4.jpg'
     },
-    {   songName:'fairy tail bgm',
+    {   songName:'Moments',
     filePath:'songs/5.mp3',
     coverPath:'covers/5.png'
 },
