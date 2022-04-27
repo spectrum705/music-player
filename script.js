@@ -33,13 +33,13 @@ let songs=[
 },
 ]
 
+//updatig the song name and cover 
 songItem.forEach((element,i)=>{
     element.getElementsByTagName('img')[0].src=songs[i].coverPath
     element.getElementsByClassName('songName')[0].innerText=songs[i].songName
 
 })
 
-//play songs
 
 
 //play pause
@@ -67,6 +67,22 @@ audioElement.addEventListener('timeupdate', ()=>{
 
 myProgress.addEventListener('change',()=>{
 audioElement.currentTime=(myProgress.value/100)*audioElement.duration;
+})
+
+//trying to loop all the songs
+audioElement.addEventListener('ended',()=>{
+    songIndex++;
+    if(songIndex>=songs.length){
+        songIndex=0;
+    }
+    audioElement.src=songs[songIndex].filePath;
+    audioElement.play();
+    songInfo.innerText=songInfo[0].innerText=songs[songIndex].songName;
+    makeAllPlays();
+    songItem[songIndex].getElementsByClassName('songItemPlay')[0].classList.remove('fa-play-circle');
+    songItem[songIndex].getElementsByClassName('songItemPlay')[0].classList.add('fa-pause-circle');
+    gif.style.opacity= 1 ;
+
 })
 
 
